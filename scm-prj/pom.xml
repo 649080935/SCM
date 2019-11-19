@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>cn.ekgc.scm</groupId>
@@ -10,6 +11,7 @@
   	<module>scm-service</module>
   	<module>scm</module>
   	<module>scm-shiro</module>
+    <module>scm-controller</module>
   </modules>
   
   <properties>
@@ -22,31 +24,31 @@
 	</properties>
 	
 	<dependencies>
-		<!-- å¼•å…¥Spring MVCæ‰€éœ€è¦çš„ä¾èµ–å…³ç³» [BEGIN] -->
+		<!-- ÒýÈëSpring MVCËùÐèÒªµÄÒÀÀµ¹ØÏµ [BEGIN] -->
   		<dependency>
   			<groupId>org.springframework</groupId>
   			<artifactId>spring-webmvc</artifactId>
   			<version>${spring.version}</version>
   		</dependency>
-  		<!-- å¼•å…¥Spring MVCæ‰€éœ€è¦çš„ä¾èµ–å…³ç³» [END] -->
+  		<!-- ÒýÈëSpring MVCËùÐèÒªµÄÒÀÀµ¹ØÏµ [END] -->
   		
-  		<!-- å¼•å…¥Spring JDBCæ‰€éœ€è¦çš„ä¾èµ–å…³ç³» [BEGIN] -->
+  		<!-- ÒýÈëSpring JDBCËùÐèÒªµÄÒÀÀµ¹ØÏµ [BEGIN] -->
   		<dependency>
   			<groupId>org.springframework</groupId>
   			<artifactId>spring-jdbc</artifactId>
   			<version>${spring.version}</version>
   		</dependency>
-  		<!-- å¼•å…¥Spring JDBCæ‰€éœ€è¦çš„ä¾èµ–å…³ç³» [END] -->
+  		<!-- ÒýÈëSpring JDBCËùÐèÒªµÄÒÀÀµ¹ØÏµ [END] -->
   		
-  		<!-- å¼•å…¥MySQLè¿žæŽ¥é©±åŠ¨çš„ä¾èµ–å…³ç³» [BEGIN] -->
+  		<!-- ÒýÈëMySQLÁ¬½ÓÇý¶¯µÄÒÀÀµ¹ØÏµ [BEGIN] -->
 		<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
 		    <version>${mysql-connector-java.version}</version>
 		</dependency>
-  		<!-- å¼•å…¥MySQLè¿žæŽ¥é©±åŠ¨çš„ä¾èµ–å…³ç³» [END] -->
+  		<!-- ÒýÈëMySQLÁ¬½ÓÇý¶¯µÄÒÀÀµ¹ØÏµ [END] -->
   		
-  		<!-- å¼•å…¥Mybatisä»¥åŠMybatiså’ŒSpringç»“åˆçš„ä¾èµ–å…³ç³» [BEGIN] -->
+  		<!-- ÒýÈëMybatisÒÔ¼°MybatisºÍSpring½áºÏµÄÒÀÀµ¹ØÏµ [BEGIN] -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
@@ -57,33 +59,33 @@
 		    <artifactId>mybatis-spring</artifactId>
 		    <version>${mybatis-spring.version}</version>
 		</dependency>
-  		<!-- å¼•å…¥Mybatisä»¥åŠMybatiså’ŒSpringç»“åˆçš„ä¾èµ–å…³ç³» [END] -->
+  		<!-- ÒýÈëMybatisÒÔ¼°MybatisºÍSpring½áºÏµÄÒÀÀµ¹ØÏµ [END] -->
   		
-  		<!-- å¼•å…¥Druidæ•°æ®æºçš„ä¾èµ–å…³ç³» [BEGIN] -->
+  		<!-- ÒýÈëDruidÊý¾ÝÔ´µÄÒÀÀµ¹ØÏµ [BEGIN] -->
 		<dependency>
 		    <groupId>com.alibaba</groupId>
 		    <artifactId>druid</artifactId>
 		    <version>${druid.version}</version>
 		</dependency>
-  		<!-- å¼•å…¥Druidæ•°æ®æºçš„ä¾èµ–å…³ç³» [END] -->
+  		<!-- ÒýÈëDruidÊý¾ÝÔ´µÄÒÀÀµ¹ØÏµ [END] -->
   		
-  		<!-- å¼•å…¥Jackasonè¿›è¡Œjsonæ•°æ®æ ¼å¼åŒ–çš„ä¾èµ–å…³ç³» [BEGIN] -->
+  		<!-- ÒýÈëJackason½øÐÐjsonÊý¾Ý¸ñÊ½»¯µÄÒÀÀµ¹ØÏµ [BEGIN] -->
 		<dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
 		    <version>${jackson-databind.version}</version>
 		</dependency>
-  		<!-- å¼•å…¥Jackasonè¿›è¡Œjsonæ•°æ®æ ¼å¼åŒ–çš„ä¾èµ–å…³ç³» [END] -->
+  		<!-- ÒýÈëJackason½øÐÐjsonÊý¾Ý¸ñÊ½»¯µÄÒÀÀµ¹ØÏµ [END] -->
   		
-  		<!-- å¼•å…¥JSTLçš„ä¾èµ–å…³ç³» [BEGIN] -->
+  		<!-- ÒýÈëJSTLµÄÒÀÀµ¹ØÏµ [BEGIN] -->
 		<dependency>
 		    <groupId>jstl</groupId>
 		    <artifactId>jstl</artifactId>
 		    <version>1.2</version>
 		</dependency>
-  		<!-- å¼•å…¥JSTLçš„ä¾èµ–å…³ç³» [END] -->
+  		<!-- ÒýÈëJSTLµÄÒÀÀµ¹ØÏµ [END] -->
   		
-  		<!-- å¼•å…¥Servletå’ŒJSPçš„ä¾èµ–å…³ç³» [BEGIN] -->
+  		<!-- ÒýÈëServletºÍJSPµÄÒÀÀµ¹ØÏµ [BEGIN] -->
 		<dependency>
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>javax.servlet-api</artifactId>
@@ -96,6 +98,6 @@
 		    <version>2.3.3</version>
 		    <scope>provided</scope>
 		</dependency>
-  		<!-- å¼•å…¥Servletå’ŒJSPçš„ä¾èµ–å…³ç³» [END] -->
+  		<!-- ÒýÈëServletºÍJSPµÄÒÀÀµ¹ØÏµ [END] -->
 	</dependencies>
 </project>
